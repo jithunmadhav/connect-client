@@ -118,7 +118,7 @@ function VideoCall({socketId,recieverSocketId,recievername,videocall}) {
 		</button>
 	</div>
 		:
-			<video playsInline ref={userVideo} autoPlay className='video-box' />
+			<video playsInline ref={userVideo} autoPlay className='video-box reciever-video-box' />
 					}		
 		</div>
 	  </div>
@@ -128,7 +128,7 @@ function VideoCall({socketId,recieverSocketId,recievername,videocall}) {
 							End
 						</button>
 					) : (
-						<button color="primary" aria-label="call" onClick={() => callUser(idToCall)}>
+						<button className='call-btn' color="primary" aria-label="call" onClick={() => callUser(idToCall)}>
 							call
 						</button>
 					)}

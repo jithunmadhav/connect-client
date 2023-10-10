@@ -18,6 +18,14 @@ height: 500px;
     width: 100%;
      
 }
+.call-btn{
+    border: 1px solid black;
+    border-radius: 6px;
+    width: 100px;
+    font-size: medium;
+    background: #43bd42;
+    font-family: ui-monospace;
+}
 .end-btn{
     background-color: rgb(237 0 0);
     border: 1px solid black;
@@ -26,6 +34,7 @@ height: 500px;
     width: 101px;
     font-family: monospace;
     height: 44px;
+    margin-top: 0px;
 }
 .end-btn:hover{
     color: black;
@@ -47,4 +56,36 @@ height: 500px;
 .call-button{
     display: flex;
     justify-content: center;
+}
+
+@media(max-width:500px){
+    .videocall-maindiv {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.reciever-video-box{
+    margin-top: 41px;
+    width: 320px;
+    height: 258px;
+    margin-left: -72px;
+}
+.caller-div {
+    width: 100%;
+    height: 100px;
+}
+.reciever-div{
+width: 100%;
+height: 100px;
+}
+.end-btn{
+    background-color: rgb(237 0 0);
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    width: 101px;
+    margin-top: 145px;
+    font-family: monospace;
+    height: 44px;
+}
 }
