@@ -40,6 +40,7 @@ function VideoCall({socketId,recieverSocketId,recievername,videocall}) {
 	}, [])
 
 	const callUser = () => {
+		console.log('Call buttton clicked');
 		const peer = new Peer({
 			initiator: true,
 			trickle: false,
@@ -68,6 +69,7 @@ function VideoCall({socketId,recieverSocketId,recievername,videocall}) {
 	}
 
 	const answerCall =() =>  {
+		console.log('Answer button clicked');
 		setCallAccepted(true)
 		const peer = new Peer({
 			initiator: false,
@@ -128,21 +130,16 @@ function VideoCall({socketId,recieverSocketId,recievername,videocall}) {
 							End
 						</button>
 					) : (
-						<button className='call-btn' color="primary" aria-label="call" onClick={() => callUser(idToCall)}>
+						// <button className='call-btn'  onClick={callUser}>
+						// 	call
+						// </button>
+						<button style={{ background:'green' }}  className='end-btn' onClick={callUser}>
 							call
 						</button>
 					)}
 					
 				</div>  
 				<div>
-				{/* {receivingCall && !callAccepted ? (
-						<div className="caller">
-						<h1 >{name} is calling...</h1>
-						<button variant="contained" color="primary" onClick={answerCall}>
-							Answer
-						</button>
-					</div>
-				) : null} */}
 			</div>
 				 </div>
   )
